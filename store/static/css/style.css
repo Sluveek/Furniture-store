@@ -1,0 +1,133 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* navbar */
+
+nav{
+    background-color: #0A7A51;
+    color: white;
+    width: 100%;
+    height: 80px;
+    padding: 0px 10px 0px 10px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 100px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* index page */
+
+.container{
+    width: 90%;
+    height: auto;
+    padding: 10px 10px 10px 10px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap
+}
+
+.productContainer{
+    width: 250px;
+    height: 300px;
+    border: 1px solid #6050DC;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.thumbnail{
+    width: 100%;
+    height: 150px;
+    border: 1px solid black;
+}
+
+.thumbnail img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.action{
+    width: 100%;
+    height: 150px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.action p{
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.productContainer button{
+    background-color: #6050DC;
+    width: 200px;
+    padding: 10px 10px 10px 10px;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: auto;
+}
+
+/* Cart page */
+
+.cart{
+    width: 300px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-container{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cart-container .cartitems{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-container .cartitems p{
+    color: white;
+    font-size: 20px;
+}
+
+.cart-container i{
+    font-size: 20px;
