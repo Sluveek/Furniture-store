@@ -1,11 +1,12 @@
 from django.shortcuts import render
+from .models import Product
 
 # Create your views here.
-from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    comments = {}
+    products = Product.objects.all()
+    comments = {"products":products}
     return render(request, "index.html", comments)
 
 

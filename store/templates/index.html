@@ -1,18 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
- <div class="container">
-        <div class="productContainer">
-            <div class="thumbnail"></div>
-            <div class="action">
 
-                <p>Table</p>
+<div class="container">
 
-                <p>€100</p>
-    
-                <button>Add to Cart</button>
-            </div>
-        </div> 
-      </div>
+    {% for product in products %}
 
+    <div class="productContainer">
+        <div class="thumbnail">
+            <img src="{{product.picture.url}}" alt="">
+        </div>
+        <div class="action">
+
+            <p>{{product.name}}</p>
+
+            <p>${{product.price}}</p>
+
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock content %}
