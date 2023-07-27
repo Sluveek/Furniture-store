@@ -8,10 +8,10 @@ class Product(models.Model):
     price = models.IntegerField()
     picture = models.ImageField(upload_to="img", default="")
     
+    
     def __str__(self):
         return self.name
     
-
 class Cart(models.Model):
     id = models.UUIDField(default=uuid.uuid4, primary_key=True)
     user = models.ForeignKey(User,  on_delete=models.CASCADE)
@@ -26,6 +26,8 @@ class Cart(models.Model):
         total = sum([item.price for item in cartitems])
         return total
     
+    
+      
     @property
     def num_of_items(self):
         cartitems = self.cartitems.all()

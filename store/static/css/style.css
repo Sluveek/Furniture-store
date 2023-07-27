@@ -1,25 +1,30 @@
-*{
-  padding: 0px;
-  margin:0px;
-  box-sizing: border-box;
-  font-family: sans-serif;
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 /* navbar */
 
-nav{
+nav {
     background-color: #0A7A51;
-    color: white;
+    color: #FFFFFF;
     width: 100%;
     height: 80px;
     padding: 0px 10px 0px 10px;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
-.logo{
+.h2,
+h2 {
+    font-size: 2rem;
+    color: white;
+}
+
+.logo {
     width: 100px;
     height: 60px;
     display: flex;
@@ -27,7 +32,7 @@ nav{
     justify-content: center;
 }
 
-.cart{
+.cart {
     width: 300px;
     height: auto;
     display: flex;
@@ -35,7 +40,7 @@ nav{
     justify-content: space-between;
 }
 
-.cart-container{
+.cart-container {
     width: 50px;
     height: 50px;
     display: flex;
@@ -44,7 +49,7 @@ nav{
     flex-direction: column;
 }
 
-.cart-container .cartitems{
+.cart-container .cartitems {
     width: 40px;
     height: 40px;
     border-radius: 40px;
@@ -55,18 +60,18 @@ nav{
     justify-content: center;
 }
 
-.cart-container .cartitems p{
+.cart-container .cartitems p {
     color: white;
     font-size: 20px;
 }
 
-.cart-container i{
+.cart-container i {
     font-size: 20px;
 }
 
 /* index page */
 
-.container{
+.container {
     width: 90%;
     height: auto;
     padding: 10px 10px 10px 10px;
@@ -78,10 +83,10 @@ nav{
     flex-wrap: wrap
 }
 
-.productContainer{
+.productContainer {
     width: 250px;
     height: 300px;
-    border: 1px solid #6050DC;
+    border: 1px solid #0A7A51;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -91,21 +96,21 @@ nav{
     margin-right: 20px;
 }
 
-.thumbnail{
+.thumbnail {
     width: 100%;
     height: 150px;
     border: 1px solid black;
     border-radius: 10px;
 }
 
-.thumbnail img{
+.thumbnail img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
     object-fit: cover;
 }
 
-.action{
+.action {
     width: 100%;
     height: 150px;
     border: 1px solid black;
@@ -115,14 +120,14 @@ nav{
     flex-direction: column;
 }
 
-.action p{
+.action p {
     font-size: 18px;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-.productContainer button{
-    background-color: #6050DC;
+.productContainer button {
+    background-color: #0A7A51;
     width: 200px;
     padding: 10px 10px 10px 10px;
     color: white;
@@ -135,7 +140,7 @@ nav{
 
 /* Cart page */
 
-.shoppingCart{
+.shoppingCart {
     width: 700px;
     height: 500px;
     padding: 20px 20px 20px 20px;
@@ -149,33 +154,35 @@ nav{
     margin-top: 20px;
 }
 
-.shoppingCart p{
+.shoppingCart p {
     font-size: 20px;
 }
 
-.shoppingCart .heading{
+.shoppingCart .heading {
     width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #6050DC;
+    background-color: #0A7A51;
     border-radius: 5px;
     color: white;
     margin-top: 10px;
 }
-.shoppingCart .name, .p_name{
+
+.shoppingCart .name,
+.p_name {
     width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.shoppingCart .p_name{
+.shoppingCart .p_name {
     width: 350px;
 }
 
-.shoppingCart .itemContainer{
+.shoppingCart .itemContainer {
     width: 100%;
     height: 300px;
     overflow-y: auto;
@@ -183,45 +190,45 @@ nav{
     margin-top: 10px;
 }
 
-.shoppingCart .item{
+.shoppingCart .item {
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border: 2px solid #6050DC;
+    border: 2px solid #0A7A51;
     margin-bottom: 10px;
 }
 
-.shoppingCart .item .iteminfo{
+.shoppingCart .item .iteminfo {
     display: flex;
-    align-items: center;   
+    align-items: center;
     justify-content: space-around;
     width: 350px;
 }
 
-.shoppingCart .item .iteminfo .p_img{
+.shoppingCart .item .iteminfo .p_img {
     width: 50px;
     height: 50px;
 }
 
-.p_img img{
+.p_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.shoppingCart button{
+.shoppingCart button {
     padding: 10px 10px 10px 10px;
     border-radius: 10px;
-    background-color: #6050DC;
+    background-color: #0A7A51;
     color: white;
     width: 100px;
     border: none;
     cursor: pointer;
 }
 
-.shoppingCart .pay-section{
+.shoppingCart .pay-section {
     width: 100%;
     height: auto;
     display: flex;

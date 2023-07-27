@@ -3,16 +3,17 @@ from .models import Product, Cart, CartItem
 from django.http import JsonResponse
 import json
 from django.contrib import messages
-
 # Create your views here.
+
+
 def index(request):
     products = Product.objects.all()
     
     if request.user.is_authenticated:
         cart, created = Cart.objects.get_or_create(user=request.user, completed=False)
         
-    comments = {"products":products, "cart": cart}
-    return render(request, "index.html", comments)
+    comment = {"products":products, "cart": cart}
+    return render(request, "index.html", comment)
 
 
 def cart(request):
@@ -24,8 +25,8 @@ def cart(request):
         cart, created = Cart.objects.get_or_create(user=request.user, completed=False)
         cartitems = cart.cartitems.all()
     
-    comments = {"cart":cart, "items":cartitems}
-    return render(request, "cart.html", comments)
+    comment = {"cart":cart, "items":cartitems}
+    return render(request, "cart.html", comment)
 
 def add_to_cart(request):
     data = json.loads(request.body)
@@ -43,11 +44,3 @@ def add_to_cart(request):
         
         print(cartitem)
     return JsonResponse(num_of_item, safe=False)
-
-
-def confirm_payment(request, pk):
-    cart = Cart.objects.get(id=pk)
-    cart.completed = True
-    cart.save()
-    messages.success(request, "Payment made successfully")
-    return redirect("index")

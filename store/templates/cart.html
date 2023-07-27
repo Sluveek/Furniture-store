@@ -4,10 +4,18 @@
   <h2>My Cart</h2>
 
   <div class="heading">
-    <div class="p_name"><h4>Product's Name</h4></div>
-    <div class="name"><h4>Quantity</h4></div>
-    <div class="name"><h4>Unit Price</h4></div>
-    <div class="name"><h4>Total</h4></div>
+    <div class="p_name">
+      <h4>Product's Name</h4>
+    </div>
+    <div class="name">
+      <h4>Quantity</h4>
+    </div>
+    <div class="name">
+      <h4>Unit Price</h4>
+    </div>
+    <div class="name">
+      <h4>Total</h4>
+    </div>
   </div>
 
   <div class="itemContainer">
@@ -20,21 +28,36 @@
         </div>
         <p>{{item.product.name}}</p>
       </div>
-
-      <div class="name"><p>{{item.quantity}}</p></div>
-      <div class="name"><p>${{item.product.price}}</p></div>
-      <div class="name"><p>${{item.price}}</p></div>
+      <div class="name">
+        <p>{{item.quantity}}</p>
+      </div>
+      <div class="name">
+        <p>${{item.product.price}}</p>
+      </div>
+      <div class="name">
+        <p>${{item.price}}</p>
+      </div>
     </div>
 
     {% endfor %}
   </div>
 
   <div class="pay-section">
-    <h3>Grand-Total: ${{cart.total_price}}</h3>
-    <button onclick = "makePayment()" >Pay</button>
+    <h3>Grand-Total: ${{ cart.total_price }}</h3>
+    <button onclick="makePayment()">Command</button>
   </div>
 </div>
+<script>
+  let cart_total = "{{ cart.total_price }}"
+  let cart_id = "{{ cart.id }}"
 
-<script src="https://checkout.flutterwave.com/v3.js"></script>
+  function makePayment() {
+    showAlert();
+  }
+
+  function showAlert() {
+    alert("Order sent!");
+  }
+</script>
 
 {% endblock content %}
