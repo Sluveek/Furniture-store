@@ -1,7 +1,4 @@
-{% extends 'base.html' %}
-
-
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <div class="shoppingCart">
   <h2>My Cart</h2>
@@ -10,13 +7,16 @@
     <div class="p_name"><h4>Product's Name</h4></div>
     <div class="name"><h4>Quantity</h4></div>
     <div class="name"><h4>Unit Price</h4></div>
+    <div class="name"><h4>Total</h4></div>
   </div>
 
   <div class="itemContainer">
+
+    {% for item in items %}
     <div class="item">
       <div class="iteminfo">
-        <div class="shop.img">
-          <img src="" alt="">
+        <div class="p_img">
+          <img src="{{item.product.picture.url}}" alt="" />
         </div>
         <p>{{item.product.name}}</p>
       </div>
@@ -26,6 +26,15 @@
       <div class="name"><p>${{item.price}}</p></div>
     </div>
 
+    {% endfor %}
   </div>
+
+  <div class="pay-section">
+    <h3>Grand-Total: ${{cart.total_price}}</h3>
+    <button onclick = "makePayment()" >Pay</button>
+  </div>
+</div>
+
+<script src="https://checkout.flutterwave.com/v3.js"></script>
 
 {% endblock content %}
