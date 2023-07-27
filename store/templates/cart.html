@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="shoppingCart">
+  <h2>My Cart</h2>
+
+  <div class="heading">
+    <div class="p_name"><h4>Product's Name</h4></div>
+    <div class="name"><h4>Quantity</h4></div>
+    <div class="name"><h4>Unit Price</h4></div>
+  </div>
+
+  <div class="itemContainer">
+    <div class="item">
+      <div class="iteminfo">
+        <div class="shop.img">
+          <img src="" alt="">
+        </div>
+        <p>{{item.product.name}}</p>
+      </div>
+
+      <div class="name"><p>{{item.quantity}}</p></div>
+      <div class="name"><p>${{item.product.price}}</p></div>
+      <div class="name"><p>${{item.price}}</p></div>
+    </div>
+
+    {% endfor %}
+  </div>
+
+{% endblock content %}
