@@ -18,4 +18,23 @@
 ![img](/media/img/Screen1.png)
 
  - Responsive Design: The website adapts to different screen sizes, ensuring a seamless user experience on different devices.
- = Product List: The home page displays a list of available furniture products with prices.
+ - Product List: The home page displays a list of available furniture products with prices.
+
+## Shopping Cart Page
+
+![img](/media/img/Screen2.png)
+
+ - The Shopping Cart page uses a Django for loop to iterate through the selected items and display the total price.
+
+## Lighthouse
+
+  - Lighthouse showed this result:
+
+![img](/media/img/Screen3.png)
+
+## Credits
+
+ - Image sources are used from the website https://mobilaslava.ro/
+    
+## Technologies
+ - Python, Main language used to build this application.
