@@ -25,8 +25,9 @@ SECRET_KEY = 'django-insecure-qq_&3igg)r-27!%75#=ql+l+=$0v7@bw!zvvcd64+riil!ezd$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-sluveek-furniturestore-w3oco4ll0dn.ws-eu102.gitpod.io']
-
+ALLOWED_HOSTS = ['8000-sluveek-furniturestore-u6l6tp6bxwq.ws-eu102.gitpod.io']
+ALLOWED_ORIGINS = ['http://8000-sluveek-furniturestore-u6l6tp6bxwq.ws-eu102.gitpod.io', 'https://8000-sluveek-furniturestore-u6l6tp6bxwq.ws-eu102.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()
 
 # Application definition
 
