@@ -15,14 +15,14 @@
 
 ## Home page
 
-![img](/media/img/Screen1.png)
+![Screen1](/media/img/Screen1.png "Screen")
 
  - Responsive Design: The website adapts to different screen sizes, ensuring a seamless user experience on different devices.
  - Product List: The home page displays a list of available furniture products with prices.
 
 ## Shopping Cart Page
 
-![img](/media/img/Screen2.png)
+![Screen2](/media/img/Screen2.png "Shopping Cart")
 
  - The Shopping Cart page uses a Django for loop to iterate through the selected items and display the total price.
 
@@ -30,7 +30,7 @@
 
   - Lighthouse showed this result:
 
-![img](/media/img/Screen3.png)
+![Scree3](/media/img/Screen3.png)
 
 ## Credits
 
